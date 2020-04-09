@@ -6,7 +6,7 @@ function App() {
   const [count, setCount] = useState(0);
   const list = {}; //object
 
-  if (count >= 10) {
+  if (count >= 5) {
     list.push(45); // list.push is not a function
   }
 
