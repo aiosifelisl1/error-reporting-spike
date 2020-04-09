@@ -11,13 +11,13 @@ const tools = [
   "LogRocket",
 ];
 
+const allowedClicks = Math.floor(Math.random() * (10 - 1) + 1);
+
 function App() {
-  const allowedClicks = 5;
   const [count, setCount] = useState(0);
-  const list = {}; //object
 
   if (count > allowedClicks) {
-    list.push(45); // list.push is not a function
+    throw new Error(`Oops! You clicked more than ${allowedClicks} times`);
   }
 
   return (
