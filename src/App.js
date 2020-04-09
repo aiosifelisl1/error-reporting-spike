@@ -11,7 +11,7 @@ const tools = [
   "LogRocket",
 ];
 
-const allowedClicks = Math.floor(Math.random() * (10 - 1) + 1);
+const allowedClicks = Math.floor(Math.random() * (10 - 0) + 0);
 
 function App() {
   const [count, setCount] = useState(0);
