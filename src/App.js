@@ -2,6 +2,15 @@ import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
+const tools = [
+  "Sentry",
+  "Bugsnag",
+  "Raygun",
+  "TrackJS",
+  "Usersnap",
+  "LogRocket",
+];
+
 function App() {
   const allowedClicks = 5;
   const [count, setCount] = useState(0);
@@ -15,6 +24,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          {tools.map((t) => (
+            <code key={t}>{t} </code>
+          ))}
+        </p>
+
         <button onClick={() => setCount(count + 1)}>Button</button>
         <p>
           If the button is clicked more than <code>{allowedClicks}</code> times
@@ -23,14 +38,6 @@ function App() {
         <p>
           Button clicked <code>{count}</code> times.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );

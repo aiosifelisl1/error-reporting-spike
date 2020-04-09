@@ -6,6 +6,8 @@ import * as serviceWorker from "./serviceWorker";
 import * as Sentry from "@sentry/browser";
 import bugsnag from "@bugsnag/js";
 import bugsnagReact from "@bugsnag/plugin-react";
+import { TrackJS } from "trackjs";
+import LogRocket from "logrocket";
 
 // Sentry setup
 Sentry.init({
@@ -17,6 +19,14 @@ Sentry.init({
 const bugsnagClient = bugsnag("f2a9c768eba12eb27bfb6593f21bd9de");
 bugsnagClient.use(bugsnagReact, React);
 const ErrorBoundary = bugsnagClient.getPlugin("react");
+
+// TrackJS
+TrackJS.install({
+  token: "4b5d3f4e04d648f5a8c1c76c18bf73dc",
+  // for more configuration options, see https://docs.trackjs.com
+});
+
+LogRocket.init("ykhrhn/error-reporting-spike");
 
 ReactDOM.render(
   <React.StrictMode>

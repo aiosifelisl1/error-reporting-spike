@@ -25,6 +25,40 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <script type="text/javascript">
+      !(function (a, b, c, d, e, f, g, h) {
+        (a.RaygunObject = e),
+          (a[e] =
+            a[e] ||
+            function () {
+              (a[e].o = a[e].o || []).push(arguments);
+            }),
+          (f = b.createElement(c)),
+          (g = b.getElementsByTagName(c)[0]),
+          (f.async = 1),
+          (f.src = d),
+          g.parentNode.insertBefore(f, g),
+          (h = a.onerror),
+          (a.onerror = function (b, c, d, f, g) {
+            h && h(b, c, d, f, g),
+              g || (g = new Error(b)),
+              (a[e].q = a[e].q || []),
+              a[e].q.push({
+                e: g,
+              });
+          });
+      })(
+        window,
+        document,
+        "script",
+        "//cdn.raygun.io/raygun4js/raygun.min.js",
+        "rg4js"
+      );
+    </script>
+    <script type="text/javascript">
+      rg4js("apiKey", "7XpK84GEpHDUu0h22M3A");
+      rg4js("enablePulse", true);
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,5 +73,17 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <script type="text/javascript">
+      (function () {
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src =
+          "//api.usersnap.com/load/5436897b-f5e0-478b-b5f0-16db24f0144c.js";
+        var x = document.getElementsByTagName("script")[0];
+        x.parentNode.insertBefore(s, x);
+      })();
+    </script>
   </body>
 </html>
